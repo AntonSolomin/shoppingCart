@@ -25,10 +25,14 @@ public class EntryPoint {
         myShoppingCart.addProduct(product2);
         myShoppingCart.addProduct(product2);
         myShoppingCart.addProduct(product2);
-        /*myShoppingCart.addProduct(product3);
+
+        // replacing the products Apple
+        myShoppingCart.replace("Apple", product3);
+
+        myShoppingCart.addProduct(product3);
         myShoppingCart.addProduct(product4);
         myShoppingCart.addProduct(product5);
-        myShoppingCart.addProduct(product6);*/
+        myShoppingCart.addProduct(product6);
 
 
         System.out.println(myShoppingCart.totalPrice());

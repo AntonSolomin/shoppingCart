@@ -53,10 +53,25 @@ public class ShoppingCart {
                     int set = count.get(key)/4;
                     // get() is get me the value assigned(related) to this key
                     total -= price.get(key)*set;
-                    messageSets += "You are buying " + count.get(key) + " items of " + key + ". It means" +
-                            " you are getting " + set + " for free! " + System.getProperty("line.separator");
+                    messageSets += "You are buying " + count.get(key) + " items of "
+                            + key + ". It means" + " you are getting " + set +
+                            " for free! " + System.getProperty("line.separator");
                 }
             }
+
+
             return messageSets + message + total;
         }
+
+    public void replace(String oldProductName, Product newProductName ) {
+        for (int i = 0; i< products.size(); i++ ) {
+            if (oldProductName == products.get(i).name) {
+                System.out.println("Found: " + products.get(i).name);
+
+                //set replaces the existing index with what you need;
+                products.set(i, newProductName);
+                System.out.println("Replaced: " + products.get(i).name);
+            }
+        }
+    }
 }
